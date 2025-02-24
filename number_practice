@@ -1,0 +1,58 @@
+## Any data type can be made an int except complex numbers 
+# string -> int is more complex  if non-numbers are present 
+
+int(123.987) # int=123 
+
+int(10+5j) ## will not work due to j
+
+int(True) # int=1
+
+int("10") #int=10
+
+int("10.5")  # will not work as there is a . within the "" so will read as a value
+
+int("ten")  ## will not work as has letters 
+
+int(0B1111) # will not work 
+
+
+
+### floats ###
+# adds decimals -- same rules apply with strings as seen with ints 
+
+float(10) # will make it 10.0
+
+float(10+5j) # will not work due to j 
+
+float(True) # will give 1.0
+
+float(False) # will give 0.0
+
+float("10") # will give 10.0
+
+float("ten") # will not work
+
+float("0B1111") # will not work 
+
+
+### bools ### 
+## bool(x)
+# if x is an int, 0=false, 1+=true
+bool(0) # false
+bool(1) # true
+bool(5) # true
+
+# if x is a float, if number total is 0=false, anything else=true
+bool(10.5) # true
+bool(0.178) #true
+bool(0.0) #false
+
+# if x is complex datatype, if both real and imaginary=0 then false, if not then true 
+bool(10-2j) #true
+bool(0+1.5j) #true
+bool(0+0j) # false
+
+# if x is string data, if "" empty=false, if not =true
+bool("true") # true
+bool("false") #true
+bool("") #false 

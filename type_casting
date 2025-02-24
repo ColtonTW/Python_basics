@@ -1,0 +1,43 @@
+## data types 
+
+#bool(true/false), int(whole numbers), float(decimal numbers), and strings (multiple "words" that aren't a list eg: today I went to the zoo)
+
+a =  "today I went to the zoo"
+print(a)
+type(a)
+
+type(a)
+
+#bool
+z = True
+type(z)
+
+
+###### type casting #######
+
+### converting between types
+#bool -> int -> float -> string 
+#True = 1
+#False = 0
+True + 7 
+
+#getting an int from a float -- will round to whole number at the start of the number 
+int(8.8)
+int(8.2)
+#both will give the same results 
+
+## automatic typecasting can be done if all can be made the same simply e.g:
+True + 3 + int(4.5) ## will give answer of 8 as True is 1 and int will round 4.5 to 4 
+
+b = 3
+c = 4.5 
+print(type(b)) ### need to add this print if running code in Sublime or it won't appear when build is run
+print(type(c))
+
+print(b+int(c)) # will convert c to an int
+
+d = 3 + int('4') ## in this case 4 is a string as it is in ''
+print(d)
+
+False + 4 ## this wil equal 4 as False = 0
+print(False + 4)

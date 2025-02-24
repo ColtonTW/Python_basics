@@ -1,0 +1,63 @@
+## assigning values to variables 
+
+x=10 
+print(x) # outputs 10 
+
+## addition assignment
+x +=5 ## basically x = x+5 so will change x by adding 5 once 
+print(x)
+
+##subtraction assignment
+x -=3 ## will subtract 3 from the existing value of x
+print(x)
+
+## multiplication assignment
+x *= 2 ## changes the previous value of x by multiplying it by 2 
+print(x)
+
+## division assignment 
+x/=4 ## divides the current value of x, in this case by 4 -- WILL ALWAYS CREATE A FLOAT 
+print(x)
+
+## modulus assignment
+x%=3 # gives the remainder of what would happen if current x were divided by the number value, here it is 3 
+print(x)
+
+## exponentiation assignment 
+x**=2 # equals x to the power of the number given
+print(x)
+
+## floor division assignment 
+x//=3 # equates to x divided by the number and then rounded down 
+print(x)
+
+
+### Assigning sums to variables - this will give the answers as the output 
+
+# addition
+a=10+5
+print(a)
+
+#subtraction
+b=10-5
+print(b)
+
+#muliplication
+c=10*5
+print(c)
+
+#division
+d=10/5 ## remember this will give a float 
+print(d)
+
+#modulo
+e=10%3
+print(e)
+
+#exponents
+f=10**2 ##10 squared
+print(f)
+
+# floor division
+g=10//3 ## 10/3 rounded down
+print(g)

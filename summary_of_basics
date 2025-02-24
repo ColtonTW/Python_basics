@@ -1,0 +1,47 @@
+## Starting with assignments 
+a=5
+a+=3 # assigns then assigns an addition
+print(a)
+
+b=5
+b-=3 # assigns then assigns a subtraction
+print(b)
+
+c=5
+c*=3 # assigns then assigns a multiplier
+print(c)
+
+d=5
+d/=3 # assigns then assigns a division
+print(d)
+
+e=5
+e%=3 # assigns then assigns a modulo
+print(e)
+
+f=5
+f**3 # assigns then assigns an exponent
+print(f)
+
+g=5
+g//=3 # assigns then assigns a floor division
+print(g)
+
+## comparison operators 
+x= 5
+y=10
+print(y==x) ##False
+print(y!=x) ## True
+print(x>y) ## False
+print(x<y) ##True
+print(x>=y) ## False
+print(x<=y) ## True
+
+## Logical operators
+a=True
+b=False
+c=True
+print(a and b) ## output False -- because they are different 
+print(a or b) ## output True -- because at least one is true 
+print(not a) ## Output False -- because a is True
+

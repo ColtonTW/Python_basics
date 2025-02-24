@@ -1,0 +1,60 @@
+a = "I am a data scientist"  # I is 0, spaces count as a number, so 1= first space 
+# for inverse, 0 stays the same, -1 is t at the end of scientist
+
+print(a)
+print(a[2:4]) # will print am as 4 is a space
+print(a[7:]) ### will print from 7 onward as no end is described 
+print(a[:9]) ## will print everything before the 9th symbol as no start is suggested
+
+# inverses:
+print(a[-9:]) ## will print everything after the 9th symbol from the end 
+print(a[:-7]) ## will print everything from before the 7th symbol from th end 
+
+
+## slicing a string further
+
+my_string = "Hello, world!"
+string_slice = my_string[7:] ## from 7th symbol onward
+print(string_slice)
+
+string_slice_2 = my_string[:5] ##before 5
+print(string_slice_2)
+
+string_slice_3 = my_string[::2] ## prints every letter from the start and then every other symbol following
+print(string_slice_3)
+
+
+## in a list
+the_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+slice_1 = the_list[2:6] ## creates a list from the list 
+
+print(slice_1)
+
+slice_2 = the_list[5:]
+print(slice_2)
+
+slice_3 = the_list[:7]
+print(slice_3)
+
+## you can create steps so you only get the variable every x steps eg:
+slice_4 = the_list[::2] ## starts at the beginning and prints every second variable
+print(slice_4)
+
+slice_5 = the_list[::3] ## prints every third variable
+print(slice_5)
+
+
+## slicing with negative indices (inverses)
+
+slice_6 = the_list[-2:] ## gives the last two from the final element
+print(slice_6)
+
+slice_7 = the_list[:-3] ## gives everything prior to the 3rd from last element 
+print(slice_7)
+
+## to get the list in reverse order put in negative steps 
+slice_8 = the_list[::-1] # starts at the end and gives the steps every one from there 
+print(slice_8)
+
+slice_9 = the_list[::-2] ## every other in the list in reverse order 
+print(slice_9)

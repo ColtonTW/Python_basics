@@ -1,0 +1,61 @@
+## Arithmetic operators 
+print(10+4) # adds
+print(10-4) # subtracts
+print(10*4) # multiplies
+print(10**4) # ** means to the power of/ acts as an exponent
+print(10/4) # divides
+print(10//4) # this is division still however it rounds down to the nearest whole number if the answer is a float
+print(5%4) # modulo, shows the remiander of a division so will return as 1 
+
+## logical and comparison operators ##
+# comparisons return as bools 
+print(5>3) # this is a 'not' operator, so will only return true if the ONE requirement is met 
+
+print(5>=3) # this is an 'or' operator, so will return as true is ONE OF TWO requirements are met, in this case if 5 is more than or equal to 3 
+
+print(5!=5) # this means does not equal to, so this would return as false as 5 does equal 5 
+
+
+print(5==5) ## compares if answers on either side are equal -- can also be done with sums eg:
+print(5==2+3)
+### = is an assignment operator, == is a comparison DO NOT GET THEM CONFUSED 
+
+## these last two are also called equality operators and can be used even if variables are not of the same datatype
+# == asks are they equal 
+# != asks are they inequal 
+10==20 ## this will be false 
+
+10!=20 # would return true
+
+10==True # would return true as all numbers not 0 equate to True
+False==False # woukd return as true
+
+"durga"=="durga" # would return as true 
+
+10=="durga" # would return as false 
+
+### Logical operators 
+# and -> if both arguements are true them the result is True - BOTH ARGUEMENTS MUST BE MET 
+a = 10
+b = 20
+if a>0 and b>0:
+	print("both a and b are greater than 0")
+# this printed because both were met. So it would not work if:
+if a>15 and b>15:
+	print("hello") ## did not print because the "and" was not met 
+
+# or -> will return true if one of multiple arguements are met as true 
+c = 10
+d = -5
+if a>0 or b>0:
+	print("either c or d are greater than 0") ## printed as even though d doesn't meet the requirements, c does 
+
+# the not operator will print if something does not meet the requirements at all 
+e = True
+if not e:
+	print("e if False")
+else:
+	print("e is True") 
+
+
+
