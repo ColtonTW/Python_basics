@@ -1,0 +1,98 @@
+# combo of DS and algorithm 
+#### important skill for data work to:
+# organise
+# store
+# use data effectively and efficiently across multiple devices
+
+# used in all systems 
+
+# all work done following Prof. Manisha 
+
+#### lists:
+# - linear
+# - always made within []
+# -  can have multiple elements
+# - mutable so data can be changed and deleted 
+# - fixed index value and can access elements easily 
+#example
+my_list = [1, 2, 3, 4, 5]
+print(my_list)
+
+#access element and slicing 
+print(my_list[3])
+
+print(my_list[0:3])
+
+# can skip elements by adding an extra :x at the end 
+print(my_list[0:4:2]) # so will print 0-4 but miss every second step 
+# first number defines where to start, second defines where to end, third is the number of steps to take between numbers 
+# SO IT DOES NOT INCLUDE THE VALUE THAT THE SECOND NUMBER ENDS ON 
+
+# add element w/out specific point to add it at 
+my_list.append(6) ## append adds element at end -- this cannot be done in the same line as printing the new list 
+print(my_list)
+
+# removing this element
+my_list.remove(6) ## removes variable in bracket
+print(my_list)
+
+## adding at a specific position
+my_list.insert(2,7) ## insert allows for a chosen point -- the first number should be the position you are adding the variable at, and the second is the variable you are adding 
+print(my_list)
+
+
+# solo practice time! 
+#create a tasklist with 3 elements then add an extra task and then remove first two elements 
+tasks = ["Do homework", "Clean house", "Do dishes"]
+print(tasks)
+tasks.append("Walk dog")
+tasks.remove("Do homework")
+print(tasks)
+tasks.remove("Clean house")
+print(tasks)
+
+
+## Tuples 
+# linear DS
+# access elements
+# non-mutable - cannot be changed, eg: lat and long
+# always created within () and output always in ()
+# function always in () too 
+
+my_tuple = (1, 2, 3, 4, 5)
+print(my_tuple)
+
+## access elemebt 
+print(my_tuple[2])
+
+#slice
+print(my_tuple[1:5])
+
+## removing 
+print(my_tuple.remove(2)) ## will get an error as tuples cannot be changed 
+## will not run build past this point on sublime as there is an error here 
+
+
+
+#### Dictionary 
+# liner DS 
+# elements are arranged in key:value 
+# key = unique
+# value can be duplicate
+# in {}
+# mutable 
+
+my_dictionary = {
+	"name":"Colt",
+	"Age":22,
+	"City":"Swansea"
+} 
+### numbers do not need to be in brackets 
+print(my_dictionary)
+
+# access
+print(my_dictionary["Age"])
+
+#update value
+my_dictionary["Name"] = "Hannah"
+print(my_dictionary)
