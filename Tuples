@@ -1,0 +1,20 @@
+## looks like a list but uses () in pace of []
+# can access elements but cannot alter the tuple's contents at all once made
+# can add coding to show we are redifining a tuple without actually rewriting it:
+
+dimensions = (200,50)
+for dimension in dimensions:
+	print(dimension)
+# to rewrite it:
+dimensions = (200,50)
+print("\nOg dimensions:") ## to show the original dimensions
+for dimension in dimensions:
+	print(dimension)
+dimensions = (400,100)
+print("\nModded dimensions:")
+for dimension in dimensions:
+	print(dimension) ## shows there are new values that need to be used and overwrites the previous tuple by adding different values to the variable name 
+
+print(dimensions)
+
+## tuples are usually used to store values for reminders of ranges/values needed for different actions throughout the coding 

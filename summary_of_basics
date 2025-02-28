@@ -44,4 +44,4 @@ c=True
 print(a and b) ## output False -- because they are different 
 print(a or b) ## output True -- because at least one is true 
 print(not a) ## Output False -- because a is True
-
+ 

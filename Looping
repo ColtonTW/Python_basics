@@ -1,0 +1,106 @@
+## first make the list 
+Queen = ['Freddie', 'Roger', 'Brian', 'John']
+for Queen_1 in Queen:
+	 print(Queen_1) ### must indent this with tab to show it is part of the above line of coding to be looped 
+
+# defines as for each name in Queen, print the name until all are printed 
+#so it loops the 'for' and 'print' line until there is nothing left to print
+
+
+# work can be done within a loop to alter the outcome eg:
+for Queen_1 in Queen:
+	 print(f"{Queen_1.title()}, play!") ## will make a sentence for each can add further sentences too e.g:
+	 print(f"Can't wait for the next song!.\n") #the .\n at the end puts it on a line below 
+
+
+## can make things for once the loop is done too
+for Queen_1 in Queen:
+	 print(f"{Queen_1.title()}, play!") ## will make a sentence for each can add further sentences too e.g:
+	 print(f"Can't wait for the next song!.\n") #the .\n at the end puts it on a line below 
+print("And that's all!") ## put this not tabbed to show the program it isn't part of the loop 
+# Make sure to indent all the lines that wish to be looped 
+
+#trying something
+for Queen_1 in Queen:
+	 print(f"{Queen_1.title()}, play!") ## will make a sentence for each can add further sentences too e.g:
+	 print(f"Can't wait for the next song!.\n") #the .\n at the end puts it on a line below 
+	 if (Queen_1 == "Freddie"):
+	 	print("Ready Freddie!")
+	 else:
+	 	print()
+print("That's all!")
+
+
+# again but different:
+
+for Queen_1 in Queen:
+	if(Queen_1 == "Roger"):
+		print("Ready Freddie?!")
+	if(Queen_1 == "Freddie"):
+		print("Hit it Rog!")
+	else:
+		print(f"{Queen_1.title()}: 'let's play'")
+	print("Can't wait for the next song.\n")
+print("Thank you everyone!")
+
+
+## using numbers:
+#use the range(function)
+for value in range(1, 5):
+	print(value) ## range tells the program the number to start and finsh at, so will not include the final value provided 
+# this can be made into a list busing the following:
+numbers = list(range(1,20))
+print(numbers)
+## can alter further by adding a third number to provide the steps between numbers in the list 
+numbers_odd = list(range(1,20,2))
+print(numbers_odd) ## will always start with the first numbers, so for even numbers:
+numbers_even = list(range(2,20,2))
+print(numbers_even)
+
+## to make the list with something done to the numbers:
+squares=[] ## make an empty list to be filled
+for value in range(1,11):
+	square = value ** 2 ## to the power of 2
+	squares.append(square) ## adjusts the empty list
+print(squares)
+
+
+#can do other sums too
+lowered = []
+for value in range(3,15): ## for creates a loop for all the values
+	less = value -3 ## takes off 3
+	lowered.append(less)
+print(lowered)
+
+# could also use the code:
+higher =[]
+for value in range(0,10):
+	higher.append(value+5) ## does the two lines of code in one 
+print(higher)
+
+# can be done in one line too:
+divisions = [value/2 for value in range(1,11)] ## [] defines list, operator and numbers shows the action to take, 'for' shows to create a loop, range shows the list of numbers 
+print(divisions)
+
+# to look at specifics of list:
+
+digits = list(range(1,11))
+print(min(digits))
+print(max(digits))
+print(sum(digits))
+
+
+## can slice and loop
+names = ['Jane', 'John', 'Bob', 'Phil', 'Tracy']
+
+print("Some people in the class:")
+for name in names[0:3]:
+	print(name.title())
+## only prints those within the range of [] specified
+
+## can copy a list or a slice to another list e.g:
+my_food = ['pizza','chips', 'garlic bread','dips']
+friends_food = my_food[:] ## this will copy the whole list 
+
+to_get = my_food[0:2]
+print(to_get) ## will copy a slice from a list 
