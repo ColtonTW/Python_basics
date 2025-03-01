@@ -22,6 +22,46 @@ print(band_1 == 'queen') ## this will return as False because there is a syntax 
 answer = 15
 if answer != '72':
 	print("That's not right, try again")
-answer = 	
+answer = 15 	
 if answer == '15':
 	print("Yay! You got it!")
+
+# can add else: if there is one alternative answer, use elif between if and else if multiple outcomes are possible. eg:
+
+for band in bands:
+	if band == "Queen":
+		print(f"{band.title()}, is the oldest")
+	elif band == "ELO":
+		print(f"{band.title()}, is the only non-rock band")
+	elif band == "ACDC":
+		print(f"{band.title()}, is the heaviest band")
+	else:
+		print(f"{band.title()}, is the most glam band")
+
+
+## Can add 'and' statements and 'or' 
+age = 30
+
+if age >=5 and age <=25:
+	print("Meets the criteria")
+else:
+	print("Doesn't meet the criteria")
+
+if age >=5 and age <=35:
+	print("Meets the criteria")
+else:
+	print("Doesn't meet the criteria")
+
+if age >=5 and age <=25:
+	print("Meets the criteria")
+elif age >=5 or age <=25:
+	print("Meets some of the criteria")
+else:
+	print("Doesn't meet the criteria")
+
+
+
+# A simple way to check if something is in a list:
+print('Queen' in bands)
+# will give True as it is there
+print('Shinedown' in bands) # will return False 
