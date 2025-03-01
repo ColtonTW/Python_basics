@@ -1,0 +1,27 @@
+## usually paired with an 'else' statement 
+
+bands = ['Queen', 'ELO', 'ACDC', 'Ratt']
+
+for band in bands:
+	if band == 'ELO':
+		print(f"{band.title()}, not really rock")
+	else:
+		print(f"{band.title()}, this is rock")
+
+### Remember to put the 'f' at the front if making a sentence with them and add the {} around the list name to ensure the variable is added and not just the name of the list name
+
+# conditional tests help here
+
+band_1 ='Queen' # sets the variable for band one
+print(band_1 == 'queen') ## this will return as False because there is a syntax error so band_1 doesn't actually equale the variable we have written here 
+
+# to check for inequality replace the '==' with '!='
+
+# these equalities and inequalities can then be paired with 'if' and 'else'
+
+answer = 15
+if answer != '72':
+	print("That's not right, try again")
+answer = 	
+if answer == '15':
+	print("Yay! You got it!")

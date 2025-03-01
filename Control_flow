@@ -1,0 +1,58 @@
+## orders the information, instructions and functions
+# executed or evaluated 
+# help with decision making 
+
+# two types of statement:
+
+# 1 = conditional:
+#for 
+#for-else
+#for-elif-else  ## use if more than two possible outcomes, use elif as many times as needed 
+
+# 2 = iterative:
+#for loop
+#while loop
+#break
+#continue
+#pass
+#exception and handling --- this is entirely based on the control flow 
+
+#### using conditional statements:
+# WAP (write a program) to take 2 numbers from the user and print the larger of the two 
+
+a = int(input("24")) ## this gets something from the user rather than assigning a speific integer
+b = int(input("76"))
+
+if a>b:
+	print(f"{a} is larger than {b}")
+elif b>a:
+	print(f"{b} is greater than {a}")
+else:
+	print(f"The numbers are equal")
+
+
+## practice - Wap for student's final marks ----- >=90= A, >=80 = B, >=70 =C, >=60=D, else=F
+
+Grades = int(input("Enter the marks: "))
+
+
+if Grades >=90:
+	print("Grade: A")
+elif Grades >=80:
+	print("Grade: B")
+elif Grades >=70:
+	print("Grade: C")
+elif Grades >=60:
+	print("Grade: D")
+else:
+	print("Grade: F")
+
+### looking at leap years 
+
+year = int(input("Enter the year: "))
+
+
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+	print(f"{year} is a leap year")
+else:
+	print(f"{year} is not a leap year")
