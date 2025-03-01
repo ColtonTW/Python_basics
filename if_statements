@@ -65,3 +65,27 @@ else:
 print('Queen' in bands)
 # will give True as it is there
 print('Shinedown' in bands) # will return False 
+
+
+# can use to see if a list is empty:
+
+pizza_toppings = []
+if pizza_toppings:
+	for topping in pizza_toppings: ## put an if before this to show that this loop itself is an 'if' statement
+		if topping == "cheese":
+			print("Cheese pizza is yours!")
+else: ## this then needs to be at the same indent at the OG if statement to work 
+		print("This is a plain pizza")
+
+
+## using multiple lists:
+
+avail_toppings = ['Cheese', 'Peppers', 'Onions', 'Pepperoni', 'Ham', 'Chicken']
+wanted_toppings = ['Cheese', 'Beef', 'Peppers']
+
+for wanted_topping in wanted_toppings:
+	if wanted_topping in avail_toppings:
+		print(f"Adding {wanted_topping} to pizza now")
+	else:
+		print(f"Sorry, {wanted_topping} isn't avaialable right now")
+print("Your pizza is ready!")
