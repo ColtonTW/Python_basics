@@ -1,0 +1,222 @@
+## allows related pieces of info to be connected together 
+# can store unlimited amounts of info
+# like making multiple lists in one round 
+#e.g:
+
+alien_0={'colour':'blue', 'spots':15} ## each : assigns something to the previous variable. ',' separates the variables, which in this case are called keys 
+
+print(alien_0['colour'])
+print(alien_0['spots'])
+
+### can assign these keys to other variables
+
+my_col = alien_0['colour']
+print(f"My favourite colour is {my_col}")
+
+## adding new key:value pairing 
+alien_0['antenna'] = 'No'  # just need to write it like this, no function needed
+print(alien_0['antenna'])
+
+# the dictionary will be printed in the order that the keys were defined in 
+
+## can start with an empty dictionary and fill from there too
+
+alien_1={}
+
+print(alien_1)
+
+alien_1['colour'] = 'green'
+alien_1['spots'] = 24 
+print(alien_1)
+
+## these can be modified at anytime in the same way you add new values:
+alien_1['colour'] = 'grey'
+print(alien_1)
+
+## you can add in a loop to any numerical values 
+# for example, let's say for every blue alien, they suddently get an extra 3 spots and grey get 6
+
+aliens = (alien_0, alien_1)
+print(aliens)
+
+for alien in aliens:
+	if alien['colour'] == 'grey':
+		alien['spots'] +=6
+	else:
+		alien['spots'] += 3
+print(aliens)
+#### This can work with elif too 
+
+
+## removing key:value pairs:
+print(alien_0)
+del alien_0['antenna']
+print(alien_0)
+### be aware these will be removed permanently unless re-added
+
+# Dictionary of similar objects -- can be made like a bullet point list 
+
+Cool_bands = {
+	'rock':'Queen',
+	'metal':'Avatar',
+	'pop':'Train',
+	'country':'Monster truck',
+	}
+print(Cool_bands)
+
+Rock = Cool_bands['rock'] ## assigns the band value for 'rock' to this variable 
+print(f"My favourite rock band is {Rock}")
+
+
+### Using the 'get' function to find a value or see if one doesn't exist
+Blues = Cool_bands.get('blues', 'No bands assigned to this genre') ## the second '' is a message that will appear should the key have no value
+print(Blues)
+
+#### Looping through a dictionary 
+for key, value in Cool_bands.items(): ### need the .items to show that each item should be examined --- also need the key, value to show that both should be worked on 
+	print(f"\nKey: {key.title()}")
+	print(f"Value: {value.title()}")
+# will make it in a bullet point format
+
+# can also make sentences to state each:
+for genre, band in Cool_bands.items(): ### genre and band assign usable variables to the key and value that can be used in the loop statements 
+	print(f"{band.title()} is the best band in the {genre.lower()} genre")
+
+#can be done for just the key or the value:
+for genre in Cool_bands.keys(): ## simply replace .items with .keys - this is the default, so will loops for only keys unless stated otherwise 
+	print(genre.title())
+
+for band in Cool_bands.values(): ## use .values instead of .keys 
+	print(band.title())
+
+## can work with parts of a dictionary to only get extra outputs for certain values:
+
+fav_books = {
+	'Colt':'Dracula',
+	'Jun':'Alice in Wonderland',
+	'Clive':'Percy Jackson',
+	'Doug':'Cinderella'
+}
+
+friends = ['Jun']
+for name in fav_books.keys():
+	print(f"Hey, {name.title()}") ### can create infinite loops within this one loop to get different outcomes
+
+	if name in friends: ### creates a secondary loop for those within a certain subset
+		book = fav_books[name].title()
+		print(f"Oh, that's cool, I also love {book}!")
+
+	if 'Simon' not in fav_books.keys():
+		print("Simon, what's your favourite book?")
+
+
+### can apply the sorted() function in a dictionary at the start of a loop to go through it in a specific order. e.g:
+
+for name in sorted(fav_books.keys()):
+	print(f"{name.title()} told me what their favourite book was.")
+
+
+## can find out what values there are in total 
+fav_books['Clyde'] ='Dracula' #here we have added a duplicate of a book 
+
+print("These books have been chosen:")
+for book in fav_books.values():
+	print(book.title())  ### it will print Dracula twice because it is there twice
+
+## to get the values WITHOUT DUPLICATES we can use set()
+print("These books have been chosen:")
+for book in set(fav_books.values()):
+	print(book.title()) ## this will only print values once, removing all duplicates 
+
+#### Nesting
+# This places multiple dictionaries into one list 
+alien_2 = {'colour':'red', 'spots':'50', 'antenna':'yes'}
+alien_0['antenna'] = 'yes'
+alien_1['antenna'] = 'no' ### Must ensure keys and values are spelt the same in all dictionaries 
+
+aliens = [alien_0,alien_1,alien_2]
+
+for alien in aliens:
+	print(alien) ## will print a list of the dictionaries, separated by {}
+## can add new lists, in multiples of the same one if wanted:
+for alien_number in range(10):
+	new_alien = {'colour':'purple', 'spots':43, 'antenna':'no'}
+	aliens.append(new_alien) ### will add 10 of these new aliens
+
+print(aliens)
+## cannot use set here though as it is now a list, not a dictionary 
+#but can look at how many aliens we have:
+print(f"There are {len(aliens)} present")
+
+# can change info for a precise group with slicing:
+
+for alien in aliens[2:3]: # this will start the loop at alien in position 2 (the third one) and end it at the one at 3 (the fourth one)
+	if alien['colour'] == 'purple':
+		alien['colour'] == 'orange',
+		alien['spots'] == '95',
+		alien['antenna'] == 'yes'
+
+		## can expand this with elif or else if wanted 
+print(aliens[1:5]) ## to only print a slice 
+
+
+## You can also put lists in dictionaries rather than the other way round:
+
+food_prefs = {
+	'sandwich': ['cheese', 'cucumber'],
+	'pizza': ['pepperoni', 'spinach'],
+	'fruit': 'mango',
+	'vegetable': 'carrot',
+	'pasta': ['tortelli', 'boursin','tomatoes']
+}
+
+print(food_prefs)
+
+# to see a specific list:
+for prefs in food_prefs['pasta']:
+	print("\t" + prefs) ### \t is to tab a line -- put in " " to show it needs to be typed 
+
+# to print all:
+
+for food, prefs in food_prefs.items():
+	print(f"For {food}, my favourite type is ")
+	if len(prefs) >=2:
+		print("one with these ingredients:")
+	else:
+		print(":")
+	for pref in prefs: ## need to nest this loop to access the list within the dictionary 
+		print(f"\t{pref}")
+
+
+
+
+## you can also nest dictionaries within each other
+foods = {
+	'pizza': {
+		'base':'dough',
+		'sauce':'yes',
+		'topping':'cheese'
+		},
+	'pasta': {
+		'base':'penne',
+		'sauce':'yes',
+		'topping':'spinach'
+		},
+	'sandwich': {
+		'base':'bread',
+		'sauce': 'no',
+		'topping':'ham'
+		}	
+}
+
+#to access parts from each:
+for food, ingredient in foods.items():
+	print(f"For {food}, the base is made of {ingredient['base']}")
+	if ingredient['sauce'] == 'yes':
+		print("then the sauce is added")
+	else:
+		print("do not add any sauce")
+	print(f"then finally add {ingredient['topping']} as the topping")
+	print(f"I hope you enjoy your {food}\n")
+
+
